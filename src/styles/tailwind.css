@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors - Rich rose pink for brand trust */
+    --color-primary: #E91E63; /* rose dark */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors - Warm coral pink for supporting elements */
+    --color-secondary: #FF6B93; /* rose coral */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors - Rose gold for CTAs and conversion moments */
+    --color-accent: #F8BBD9; /* rose gold */
+    --color-accent-foreground: #8B1538; /* dark rose */
+    
+    /* Background Colors - Soft pink canvas */
+    --color-background: #FFF0F5; /* lavender blush */
+    --color-foreground: #8B1538; /* dark rose */
+    
+    /* Surface Colors - Subtle pastel pink for section separation */
+    --color-card: #FFC0CB; /* pink pastel */
+    --color-card-foreground: #8B1538; /* dark rose */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #8B1538; /* dark rose */
+    
+    /* Muted Colors - Light pink for supporting text */
+    --color-muted: #FFC0CB; /* pink pastel */
+    --color-muted-foreground: #B91372; /* rose-600 */
+    
+    /* Border and Input Colors */
+    --color-border: #FF6B93; /* rose coral */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #F8BBD9; /* rose gold */
+    
+    /* Status Colors */
+    --color-success: #4CAF50; /* green-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #FF9800; /* orange-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #F44336; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #F44336; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Rose medium for credibility */
+    --color-info: #FF91A4; /* rose medium */
+    --color-info-foreground: #FFFFFF; /* white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-accent {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer components {
+.btn-whatsapp  {
+    @apply bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold py-3 px-6 rounded-lg transition-all shadow-lg hover:shadow-xl;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-elevation {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cta-elevation {
+    box-shadow: 0 4px 6px rgba(233, 30, 99, 0.1);
+  }
+}
+
+@layer utilities {
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  .backdrop-blur-light {
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
